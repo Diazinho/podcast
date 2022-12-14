@@ -49,20 +49,6 @@
   
   a { text-decoration: none; }
   
-  a,
-  img,
-  span,
-  input,
-  button,
-  ion-icon { display: block; }
-  
-  button {
-    font: inherit;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
   input {
     font: inherit;
     border: none;
@@ -87,55 +73,7 @@
   
   ::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.6); }
   
-  
-  
-  
-  
-  /*--------------    REUSED STYLE -------------------*/
-
-  
-  
-  .btn {
-    color: var(--texts-colors);
-    font-size: var(--fs-4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 9px 10px;
-    border-radius: 4px;
-  }
-  
-  .btn-primary {
-    background: var(--gradient);
-    background-size: 500%;
-    background-position: right;
-    padding: 15px 25px;
-    gap: 8px;
-    transition: background var(--transition);
-  }
-  
-  .btn-primary:is(:hover, :focus) { background-position: left; }
-  
-  .btn-primary > ion-icon { font-size: 18px; }
-  
-  .btn-primary > span { margin-top: 3px; }
-  
-  .container { padding: 0 15px; }
-  
-  .h3 {
-    color: var(--white);
-    font-size: var(--fs-2);
-    line-height: 1.5;
-  }
-  
-  
-  
-  
-  
   /*--------------#HEADER---------------------*/
-    
-
   
   header {
     position: fixed;
@@ -156,61 +94,13 @@
     justify-content: space-between;
     align-items: center;
   }
-  
-  .nav-toggle-btn {
-    color: var(--texts-colors);
-    font-size: 35px;
-    border-radius: 4px;
-  }
-  
-  .nav-toggle-btn ion-icon { --ionicon-stroke-width: 40px; }
-  
-  .navbar {
-    position: fixed;
-    bottom: -270px;
-    left: 0;
-    width: 100%;
-    background: var(--Nav-bar-colors);
-    border-radius: 8px 8px 0 0;
-    padding: 30px 10px 10px;
-    box-shadow: 0 -1px 10px hsla(0, 0%, 0%, 0.5);
-    z-index: 2;
-    visibility: hidden;
-    transition: 0.15s ease-in;
-  }
-  
-  .navbar.active {
-    bottom: 0;
-    visibility: visible;
-    transition: 0.25s ease-out;
-  }
-  
-  .navbar-list {
-    padding-bottom: 5px;
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
-    margin-bottom: 5px;
-  }
-  
-  .navbar::before {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 4px;
-    background: hsla(0, 0%, 100%, 0.05);
-    border-radius: 5px;
-  }
-  
+
   .navbar-link {
     color: var(--texts-colors);
     font-size: var(--fs-4);
     padding: 10px;
     border-radius: 4px;
   }
-  
-  
   
   
   /*--------------HERO-(body)--------------------*/
@@ -294,16 +184,11 @@
   }
 
   /*---------------FOOTER-------------------- */
-    
-
   
   .footer-top {
     padding: var(--section-padding) 0;
     border-bottom: 1px solid var(--Border-line);
   }
-  
-  .footer-brand,
-  .footer-brand .logo { margin-bottom: 25px; }
   
   .footer-text {
     color: var(--Footer-colors);
@@ -346,13 +231,9 @@
   .copyright a:is(:hover, :focus) { color: var(--blue-ryb); }
   
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #RESPONSIVE
-  \*-----------------------------------*/
+  /*-------------#RESPONSIVE-----------------*/
+    
+ 
   
   
   @media (min-width: 550px) {
@@ -375,19 +256,7 @@
       --fs-4: 16px;
       margin-bottom: 0;
     }
-    .hero-btn-group {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 25px;
-    }
-    .btn-link-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 25px;
-    }
-    .podcast-list { grid-template-columns: 1fr 1fr; }
+
   
     .footer-top .container {
       display: flex;
@@ -402,7 +271,6 @@
       margin-bottom: 0;
     }
   
-    .footer-list { margin-bottom: 0; }
   }
   
   
@@ -437,21 +305,7 @@
       margin-bottom: 0;
       padding-bottom: 0;
     }
-    .navbar-link { position: relative; }
-    .navbar-link::after {
-      --scale: 0;
-  
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) scale(var(--scale));
-      transform-origin: left;
-      width: calc(100% - 20px);
-      height: 2px;
-      background: var(--gradient);
-      transition: var(--transition);
-    }
+
     .navbar-link:is(:hover, :focus) {
       background: var(--gradient);
       -webkit-text-fill-color: transparent;
@@ -480,76 +334,10 @@
       margin-inline: auto;
     }
   
-  
-  }
-  
-  
-  
-  
-  
-  /* ------ responsive for larger than 1200px --------- */
-   
-  
-  @media (min-width: 1200px) {
-  
     :root {
   
       /* ------- spacing ------- */
       --section-padding: 60px;
   
-    }
-  
-  
-  
-    /* ------ HEADER --------- */
-  
-    header { padding-block: 25px; }
-  
-    header .container { max-width: 1300px; }
-  
-    .navbar { gap: 20px; }
-  
-    .navbar-actions .btn { margin-left: 20px; }
-  
-  
-  
-    /* -------- HERO --------- */
-     
-  
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 30px;
-      padding-top: 160px;
-    }
-  
-    .hero-content {
-      width: 95%;
-      margin-inline: 0;
-    }
-  
-    .hero-title {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  
-    .hero-text { margin-bottom: 25px; }
-  
-    .hero-btn-group {
-      flex-wrap: wrap-reverse;
-      gap: 35px;
-    }
-  
-    .hero-banner {
-      display: block;
-      width: 100%;
-      padding-top: 100%;
-      background: url("../images/hero-banner.png") no-repeat;
-      background-size: cover;
-      border-radius: 100px;
-    }
-  
-    .podcast-list { grid-template-columns: repeat(4, 1fr); }
-  
-  }
+    } 
+}
