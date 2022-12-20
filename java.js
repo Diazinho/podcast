@@ -1,5 +1,5 @@
 /**
- * header sticky
+ * header stick
  */
 
 const header = document.querySelector("[data-header]");
